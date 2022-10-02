@@ -1,11 +1,27 @@
 // NIGHT MODE
-let ale = document.querySelector("#night");
-ale.addEventListener("click", function() {
-    if(ale.src.match("icons/half-moon-svgrepo-com.svg")){
-        ale.src = "icons/sunset-svgrepo-com.svg";
-    } else {
-        ale.src = "icons/half-moon-svgrepo-com.svg";
+// let ale = document.querySelector("#night");
+// ale.addEventListener("click", function() {
+//     if(ale.src.match("icons/half-moon-svgrepo-com.svg")){
+//         ale.src = "icons/sunset-svgrepo-com.svg";
+//     } else {
+//         ale.src = "icons/half-moon-svgrepo-com.svg";
+//     }
+// })
+
+let color = document.querySelector(".fence");
+let wrapper = document.querySelectorAll(".container-box");
+let onlineStat = document.querySelector(".available");
+let checky = document.querySelector("#mode");
+// console.log(onlineStat);
+checky.addEventListener("click", () => {
+    for (let z = 0; z < wrapper.length; z++) {
+        wrapper[z].classList.toggle("container-box_light");
+        // color[z].classList.toggle("fence-color");
+        // onlineStat[z].classList.toggle("online-clr");
     }
+    // wrapper.classList.toggle("container-box_light");
+    // color.classList.toggle("fence-color");
+    // onlineStat.classList.toggle("online-clr");
 })
 
 //  TOP ICONS
