@@ -16,7 +16,7 @@ let checky = document.querySelector("#mode");
 checky.addEventListener("click", () => {
     for (let z = 0; z < wrapper.length; z++) {
         wrapper[z].classList.toggle("container-box_light");
-        // color[z].classList.toggle("fence-color");
+        // color[z].classList.toggle("fenceColor");
         // onlineStat[z].classList.toggle("online-clr");
     }
     // wrapper.classList.toggle("container-box_light");

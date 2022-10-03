@@ -235,7 +235,7 @@ label {
     height: 100%;
 }
 
-.fence-color {
+.fenceColor {
     color: var(--black-);
 }
 
@@ -466,7 +466,7 @@ label {
     display: flex;
     align-items: center;
     justify-content: start;
-    margin-bottom: 1rem;
+    margin-bottom: 1.7rem;
 }
 
 :is(#mail, #password) {
@@ -539,7 +539,9 @@ label {
     transition: 1s;
 }
 
-
+.login-btn {
+    border: 1px solid white;
+}
 
 .reg {
     display: flex;
@@ -552,5 +554,7 @@ label {
     :is(#mail, #password, .cb) {
         width: 100%;
     }
+
+
 }
 
