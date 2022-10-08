@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&family=Nunito:wght@400;700&display=swap');
-@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css);
+
 
 :root {
-    --background-color-: background-color: rgba(17, 25, 40, 0.75);
+    --background-color-: rgba(17, 25, 40, 0.75);
     --regularWhite: #ffffff;
     --onlineStatColor: #2c6e49;
     --onlineFontColor: #9ca3af;
@@ -25,7 +25,6 @@
     text-decoration: none;
     scroll-behavior: smooth;
     list-style-type: none;
-    /* transition: 1s; */
 }
 
 .one {
@@ -57,11 +56,6 @@ header {
     padding-block: .5rem;
     padding-inline: 1rem;
     color: #f5f3f4;
-}
-
-.follow {
-    text-align: center;
-    margin-top: 2rem;
 }
 
 .name {
@@ -233,6 +227,8 @@ label {
     color: var(--regularWhite);
     width: 100%;
     height: 100%;
+    display: grid;
+    place-items: center;
 }
 
 .fenceColor {
@@ -242,21 +238,18 @@ label {
 .container-box {
     width: max(55%, 350px);
     padding-block: 1.5rem;
-    margin-top: 4rem;
+    /* margin-top: 4rem; */
     margin-inline: auto;
     border: 1px solid rgba(255, 255, 255, 0.125);
-    backdrop-filter: blur(16px) saturate(180%);
-    -webkit-backdrop-filter: blur(16px) saturate(180%);
     background-color: rgba(17, 25, 40, 0.75);
     border-radius: 12px;
 }
 
 .container-box_light {
-    backdrop-filter: blur(16px) saturate(180%);
-    -webkit-backdrop-filter: blur(16px) saturate(180%);
     background-color: rgba(255, 255, 255, 0.75);
     border-radius: 12px;
     border: 1px solid rgba(209, 213, 219, 0.3);
+    color: black;
 }
 
 .switch-wrap {
@@ -298,7 +291,7 @@ label {
     border-top-left-radius: 1em;
     border-top-right-radius: 1em;
     transform: rotateZ(-55deg);
-    left: .28em;
+    left: .33em;
     top: .55em;
     cursor: pointer;
     transition: .6s;
@@ -462,21 +455,28 @@ label {
     margin-bottom: .5rem;
 }
 
-:is(.mailing, .pass) {
+:is(.field, .passfield) {
+    width:  max(200px, 60%);
     display: flex;
     align-items: center;
     justify-content: start;
     margin-bottom: 1.7rem;
+    border: 1px solid white;
+    border-radius: 5px;
+    background-color: #253247;
 }
 
+.inputField {
+    background-color: var(--regularWhite);
+ }
+
 :is(#mail, #password) {
-   width:  max(200px, 60%);
+   width: 100%;
    height: 40px;
    padding-left: 13px;
-   border-radius: 0 5px 5px 0;
    border: none;
-   background-color: #253247;
-   border: 1px solid #9ca3af;
+   background-color: transparent;
+   border-radius: 0 5px 5px 0;
 }
 
 ::placeholder {
@@ -485,10 +485,9 @@ label {
 }
 
 :is(.msg, .lock) {
-    background-color: #253247;
-    border: 1px solid #9ca3af;
-    max-height: 100%;
-    padding: .54em;
+    border-right: 1px solid #9ca3af;
+    padding: .59em;
+    border-radius: 5px 0 0 5px;
 }
 
 #checkybee {
@@ -496,7 +495,7 @@ label {
 }
 
 .cb {
-    width: 65%;
+    width: 60%;
     display: flex;
     margin-bottom: 1.5rem;
     justify-content: space-between;
@@ -519,7 +518,6 @@ label {
     width: 15px;
     height: 15px;
     border-radius: 50%;
-    /* background-color: #253247;; */
     border: 1px solid white;
 }
 
@@ -539,10 +537,6 @@ label {
     transition: 1s;
 }
 
-.login-btn {
-    border: 1px solid white;
-}
-
 .reg {
     display: flex;
     gap: .5rem;
@@ -555,6 +549,21 @@ label {
         width: 100%;
     }
 
+    :is(.field, .passfield) {
+        width: 100%;
+    }
 
+    /* header */
+    header {
+        position: relative;
+    }
+
+    .switching {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        top: 110%;
+    }
 }
 

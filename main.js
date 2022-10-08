@@ -1,28 +1,22 @@
-// NIGHT MODE
-// let ale = document.querySelector("#night");
-// ale.addEventListener("click", function() {
-//     if(ale.src.match("icons/half-moon-svgrepo-com.svg")){
-//         ale.src = "icons/sunset-svgrepo-com.svg";
-//     } else {
-//         ale.src = "icons/half-moon-svgrepo-com.svg";
-//     }
-// })
 
 let color = document.querySelector(".fence");
 let wrapper = document.querySelectorAll(".container-box");
 let onlineStat = document.querySelector(".available");
-let checky = document.querySelector("#mode");
+// let checky = document.querySelector("#mode");
 // console.log(onlineStat);
+
+// #mode is a toggle id collected 
+let checky = document.querySelector("#mode");
+let mailField = document.querySelector(".field");
+let passWord = document.querySelector(".passfield")
 checky.addEventListener("click", () => {
-    for (let z = 0; z < wrapper.length; z++) {
-        wrapper[z].classList.toggle("container-box_light");
-        // color[z].classList.toggle("fenceColor");
-        // onlineStat[z].classList.toggle("online-clr");
+    for (let i = 0; i < wrapper.length; i++) {
+        wrapper[i].classList.toggle("container-box_light");
     }
-    // wrapper.classList.toggle("container-box_light");
-    // color.classList.toggle("fence-color");
-    // onlineStat.classList.toggle("online-clr");
+    mailField.classList.toggle("inputField");
+    passWord.classList.toggle("inputField");
 })
+console.log(mailField);
 
 //  TOP ICONS
 let twitter = document.querySelector("#twi");
@@ -44,12 +38,4 @@ mail.addEventListener("click", function(){
     }
 })
 
-// SOCIAL MEDIA ICONS
-let butTon = document.querySelector(".btn")
-let socialMedia = document.querySelector(".socials");
-let hitty = document.querySelector(".hit");
-butTon.addEventListener("click", function(){
-    socialMedia.classList.add("sm");
-    hitty.innerHTML = "hit icon to follow me";
-})
 
